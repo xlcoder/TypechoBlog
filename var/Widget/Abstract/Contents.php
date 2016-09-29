@@ -149,9 +149,9 @@ class Widget_Abstract_Contents extends Widget_Abstract
     protected function ___summary()
     {
         $content = $this->content;
-        $parts = preg_split("/(<\/\s*(?:p|blockquote|q|pre|table)\s*>)/i", $content, 2, PREG_SPLIT_DELIM_CAPTURE);
+        $parts = preg_split("/(<\/\s*(?:p|blockquote|q|pre|table)\s*>)/i", $content, 5, PREG_SPLIT_DELIM_CAPTURE);
         if (!empty($parts)) {
-            $content = $parts[0] . $parts[1];
+            $content = $parts[0] . $parts[1] . $parts[2] . $parts[3] . $parts[4];
         }
 
         return $content;
